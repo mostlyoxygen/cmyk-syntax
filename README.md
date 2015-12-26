@@ -3,7 +3,7 @@
 A syntax theme using (something close to) three of the four printing colours
 (k is covered by the background).
 
-![screenshot](screenshot.png "The theme in action")
+![screenshot](https://raw.githubusercontent.com/mostlyoxygen/cmyk-syntax/master/screenshot.png "The theme in action")
 
 Because I find syntax highlighting more useful when reading code than writing
 it this theme only highlights a few elements, such as class and function
