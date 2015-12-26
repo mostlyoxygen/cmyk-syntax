@@ -1,0 +1,113 @@
+@import "syntax-variables";
+
+atom-text-editor, :host {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
+
+    .line-number {
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @light-gray;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+}
+
+atom-text-editor .search-results .marker .region,
+:host .search-results .marker .region {
+  background-color: transparent;
+  border: 1px solid @syntax-result-marker-color;
+}
+
+atom-text-editor .search-results .marker.current-result .region,
+:host .search-results .marker.current-result .region {
+  border: 1px solid @syntax-result-marker-color-selected;
+}
+
+.comment {
+    color: @cyan;
+}
+
+.keyword {
+    &.import { color: @yellow; }
+    &.statement { color: @yellow; }
+    &.html { color: @magenta; }
+}
+
+.meta {
+    &.class { color: @magenta; }
+    &.function { color: @magenta; }
+    &.jinja { color: @magenta; font-style: italic; }
+    &.property-name { color: @yellow; }
+    &.selector { color: @magenta; }
+    &.tag {
+        color: @yellow;
+        .tag { color: @magenta; }
+    }
+}
+
+.punctuation {
+    &.tag { color: @magenta; }
+}
+
+.string {
+    &.block { color: @cyan; }
+}
+
+.support {
+    &.property-name { color: @yellow; }
+}
+
+.storage {
+    &.modifier { color: @yellow; }
+}
+
+.css {
+    &.embedded.html {
+        color: @magenta;
+        .property-list { color: @syntax-text-color; }
+    }
+    &.attribute-name { color: @magenta; }
+}
+
+.comment {
+    color: @cyan;
+}

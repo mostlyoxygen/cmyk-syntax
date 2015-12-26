@@ -1,0 +1,15 @@
+{
+  "name": "cmyk-syntax",
+  "theme": "syntax",
+  "version": "0.0.0",
+  "description": "Syntax theme that doesn't highlight everything.",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
+  "repository": "https://github.com/mostlyoxygen/cmyk-syntax",
+  "license": "CC0-1.0",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
