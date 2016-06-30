@@ -35,7 +35,7 @@ atom-text-editor, :host {
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
-    color: @light-gray;
+    color: @ui-5;
   }
 
   .invisible {
@@ -62,52 +62,66 @@ atom-text-editor .search-results .marker.current-result .region,
   border: 1px solid @syntax-result-marker-color-selected;
 }
 
-.comment {
-    color: @cyan;
-}
+
+/* Base styles. */
+
+.comment { color: @cyan; }
 
 .keyword {
-    &.import { color: @yellow; }
-    &.statement { color: @yellow; }
-    &.html { color: @magenta; }
+    &.control { color: @yellow; }
 }
 
-.meta {
-    &.class { color: @magenta; }
-    &.function { color: @magenta; }
-    &.jinja { color: @magenta; font-style: italic; }
-    &.property-name { color: @yellow; }
-    &.selector { color: @magenta; }
-    &.tag {
-        color: @yellow;
-        .tag { color: @magenta; }
+
+/* Python specific styles. */
+
+.python {
+    &.keyword {
+        &.import { color: @yellow; }
+    }
+    &.meta {
+        &.function,
+        &.class {
+            color: @magenta;
+        }
+    }
+    &.string.block { color: @cyan; }
+}
+
+
+/* Javascript specific styles. */
+
+.js {
+    &.meta.function {
+        .operator,
+        .parameter,
+        .parameters,
+        .entity.name.function,
+        .storage.type.function {
+            color: @magenta;
+        }
+    }
+    &.storage.type.var { color: @yellow; }
+}
+
+
+/* HTML specific styles. */
+
+.html {
+    &.meta.tag {
+        color: @magenta;
+        .string { color: @yellow; }
     }
 }
 
-.punctuation {
-    &.tag { color: @magenta; }
-}
 
-.string {
-    &.block { color: @cyan; }
-}
-
-.support {
-    &.property-name { color: @yellow; }
-}
-
-.storage {
-    &.modifier { color: @yellow; }
-}
+/* CSS specific styles. */
 
 .css {
-    &.embedded.html {
-        color: @magenta;
-        .property-list { color: @syntax-text-color; }
+    &.entity {
+        &.name,
+        &.attribute-name {
+            color: @magenta;
+        }
     }
-    &.attribute-name { color: @magenta; }
-}
-
-.comment {
-    color: @cyan;
+    &.support.property-name { color: @yellow; }
 }
